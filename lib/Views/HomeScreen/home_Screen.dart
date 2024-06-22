@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../Model/Datamodel.dart';
 import '../../Provider/language_provider.dart';
 import '../../Provider/theme_provider.dart';
 
@@ -24,23 +25,10 @@ class DohaApp extends StatelessWidget {
               ),
             ),
             child: Column(
+
               children: [
-                SizedBox(height: 80), // Space for the icons at the top
-                DropdownButton<String>(
-                  value: languageProvider.selectedLanguage,
-                  onChanged: (String? newValue) {
-                    if (newValue != null) {
-                      languageProvider.setSelectedLanguage(newValue);
-                    }
-                  },
-                  items: <String>['Hindi', 'English', 'Gujarati']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
-                ),
+               Spacer(), // Space for the icons at the top
+
                 Expanded(
                   child: ListView.builder(
                     itemCount: dohas.length,
@@ -75,6 +63,7 @@ class DohaApp extends StatelessWidget {
                     },
                   ),
                 ),
+                Spacer()
               ],
             ),
           ),
@@ -93,7 +82,7 @@ class DohaApp extends StatelessWidget {
             top: 40,
             left: 20,
             child: DropdownButton<String>(
-              dropdownColor: themeProvider.isDarkMode ? Colors.grey[800] : Colors.white,
+              dropdownColor: themeProvider.isDarkMode ? Colors.grey[900] : Colors.white,
               value: languageProvider.selectedLanguage,
               onChanged: (String? newValue) {
                 if (newValue != null) {
