@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../Model/Datamodel.dart';
 import '../../Provider/language_provider.dart';
 import '../../Provider/theme_provider.dart';
 
@@ -31,27 +30,26 @@ class DohaApp extends StatelessWidget {
 
                 Expanded(
                   child: ListView.builder(
-                    itemCount: dohas.length,
+                    itemCount: languageProvider.dohaData.length,
                     itemBuilder: (context, index) {
-                      Doha doha = dohas[index];
                       return ListTile(
                         title: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               languageProvider.selectedLanguage == 'Hindi'
-                                  ? doha.hindi
+                                  ? languageProvider.dohaData[index].hindi
                                   : languageProvider.selectedLanguage == 'English'
-                                  ? doha.english
-                                  : doha.gujarati,
+                                  ? languageProvider.dohaData[index].english
+                                  : languageProvider.dohaData[index].gujarati,
                             ),
                             SizedBox(height: 8.0),
                             Text(
                               languageProvider.selectedLanguage == 'Hindi'
-                                  ? doha.meaningHindi
+                                  ? languageProvider.dohaData[index].meaningHindi
                                   : languageProvider.selectedLanguage == 'English'
-                                  ? doha.meaningEnglish
-                                  : doha.meaningGujarati,
+                                  ? languageProvider.dohaData[index].meaningEnglish
+                                  : languageProvider.dohaData[index].meaningGujarati,
                               style: TextStyle(
                                 fontStyle: FontStyle.italic,
                                 color: themeProvider.isDarkMode ? Colors.grey[300] : Colors.grey[700],
