@@ -113,7 +113,7 @@ class DohaApp extends StatelessWidget {
               icon: Icon(themeProvider.isDarkMode
                   ? Icons.light_mode
                   : Icons.dark_mode),
-              color: Colors.white,
+              color:themeProvider.isDarkMode ? Colors.white : Colors.black54,
               onPressed: () {
                 themeProvider.toggleTheme();
               },
