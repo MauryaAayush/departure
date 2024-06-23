@@ -26,7 +26,9 @@ class DohaApp extends StatelessWidget {
             child: Column(
               children: [
 
-
+SizedBox(
+  height: 50,
+),
 
                 Expanded(
                   child: ListView.builder(
