@@ -25,9 +25,9 @@ class DohaApp extends StatelessWidget {
             ),
             child: Column(
               children: [
-                // Space for the icons at the top
 
-                // Removed Expanded
+
+
                 Expanded(
                   child: ListView.builder(
                     shrinkWrap: true,
