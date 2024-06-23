@@ -56,15 +56,16 @@ class DohaApp extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                height: 100,
-                                width: 200,
+                                height: 150,
+                                width: 230,
                                 decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
                                     image: DecorationImage(
                                         image:
-                                            AssetImage("assets/newimgs.jpeg"),
+                                            AssetImage("assets/done.jpg"),
                                         fit: BoxFit.cover)),
                               ),
-                              SizedBox(height: 10.0),
+                              SizedBox(height: 20.0),
                               Text(
                                 languageProvider.selectedLanguage == 'Hindi'
                                     ? languageProvider.dohaData[index].hindi
@@ -93,6 +94,8 @@ class DohaApp extends StatelessWidget {
                                       : Colors.grey[700],
                                 ),
                               ),
+
+                              SizedBox(height: 20.0),
                             ],
                           ),
                         ),
