@@ -26,7 +26,7 @@ class DohaApp extends StatelessWidget {
             child: Column(
 
               children: [
-               Spacer(), // Space for the icons at the top
+               const Spacer(), // Space for the icons at the top
 
                 Expanded(
                   child: ListView.builder(
@@ -61,7 +61,7 @@ class DohaApp extends StatelessWidget {
                     },
                   ),
                 ),
-                Spacer()
+                const Spacer()
               ],
             ),
           ),
