@@ -34,7 +34,7 @@ class DohaApp extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return ListTile(
                         title: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
                               languageProvider.selectedLanguage == 'Hindi'
