@@ -25,11 +25,9 @@ class DohaApp extends StatelessWidget {
             ),
             child: Column(
               children: [
-
-SizedBox(
-  height: 50,
-),
-
+                SizedBox(
+                  height: 50,
+                ),
                 Expanded(
                   child: ListView.builder(
                     shrinkWrap: true,
@@ -63,7 +61,8 @@ SizedBox(
                                 decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image:
-                                            AssetImage("assets/newimgs.jpeg"),fit: BoxFit.cover)),
+                                            AssetImage("assets/newimgs.jpeg"),
+                                        fit: BoxFit.cover)),
                               ),
                               SizedBox(height: 10.0),
                               Text(
