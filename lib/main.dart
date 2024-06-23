@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'Provider/language_provider.dart';
 import 'Provider/theme_provider.dart';
 import 'Views/HomeScreen/home_Screen.dart';
-
+import 'Views/Splash_Screen.dart';
 
 void main() {
   runApp(
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: themeProvider.themeMode,
-      home: DohaApp(),
+      home: const SplashScreen(),
     );
   }
 }
