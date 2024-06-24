@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 5), () {
       Navigator.of(context).push(MaterialPageRoute(builder: (context) => DohaApp(),));
     });
   }
@@ -26,11 +26,11 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Center(
         child: Container(
-          height: 100,
-          width: 100,
+          height: 350,
+          width: 250,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/tulsidass.jpg'),
+              image: AssetImage('assets/splash.gif'),
             ),
           ),
         ),
